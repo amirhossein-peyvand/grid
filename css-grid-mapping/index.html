@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<title>CSS Grid</title>
+	</head>
+
+	<style>
+
+		.grid-container {
+			display: grid;
+			grid-template-areas: 
+				'header header header'
+				'content1 content1 sidebar1'
+				'content2 content2 sidebar2'
+				'box1 box2 box3'
+				'footer footer footer';
+			grid-gap: 0.5rem;
+		}
+		
+		.header {
+			grid-area: header;
+			text-align: center;
+		}
+
+		.content1 {
+			grid-area: content1;
+		}
+
+		.sidebar1 {
+			grid-area: sidebar1;
+		}
+
+		.content2 {
+			grid-area: content2;
+		}
+
+		.sidebar2 {
+			grid-area: sidebar2;
+		}
+
+		.box1 {
+			grid-area: box1;
+		}
+
+		.box2 {
+			grid-area: box2;
+		}
+
+		.box3 {
+			grid-area: box3;
+		}
+
+		.footer {
+			grid-area: footer;
+			text-align: center;
+		}
+
+		.header,
+		.content1, .sidebar1,
+		.content2, .sidebar2,
+		.box1, .box2, .box3,
+		.footer {
+			border: 1px solid #ccc;
+			padding: 0.5rem;
+		}
+
+
+		@media(max-width: 500px) {
+			.grid-container {
+				grid-template-areas: 
+					'header'
+					'content1'
+					'sidebar1'
+					'content2'
+					'sidebar2'
+					'box1'
+					'box2'
+					'box3'
+					'footer'
+			}
+		}
+
+
+	</style>
+
+	<body>
+
+		<div class="grid-container">
+			<header class="header">
+				<h1>Welcome To The Grid Technology</h1>
+			</header>
+
+			<section class="content1">
+				<h3>This is the content one</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</section>
+
+			<aside class="sidebar1">
+				<h4>Programming Fields</h4>
+				<ul>
+					<li>Web Development</li>
+					<li>Mobile Development</li>
+					<li>Game Development</li>
+					<li>AI</li>
+				</ul>
+			</aside>
+
+			<section class="content2">
+				<h3>This is the content two</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</section>
+
+			<aside class="sidebar2">
+				<h4>Top Web Frameworks</h4>
+				<ul>
+					<li>React JS</li>
+					<li>Django</li>
+					<li>Angular</li>
+					<li>Vue JS</li>
+				</ul>
+			</aside>
+
+
+			<div class="box1">
+				<h3>This is box one</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+
+			<div class="box2">
+				<h3>This is box two</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+
+			<div class="box3">
+				<h3>This is box three</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+
+			<footer class="footer">
+				<p>Copyright &copy; 2021</p>
+			</footer>
+
+		</div>
+		
+		
+	</body>
+</html>
